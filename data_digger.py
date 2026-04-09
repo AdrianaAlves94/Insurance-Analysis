@@ -74,8 +74,6 @@ def load_file_and_clean(url):
     duplicates_removed = pre_dup_count - len(df)
 
     print(f"--- Data Cleaning Report ---")
-    print(f"- Rows removed (Null Age): {age_drop_count}")
-    print(f"- Rows removed (Invalid Type '?'): {type_filter_removed}")
     print(f"- Duplicate records removed: {duplicates_removed}")
     print(f"- Final record count: {len(df)}")
 
