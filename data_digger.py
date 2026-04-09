@@ -118,3 +118,10 @@ def run_summary(df):
     type_analysis = df['Type_Clean'].value_counts().reset_index()
     type_analysis.columns = ['Incident Type', 'Count']
     print(tabulate(type_analysis, headers='keys', tablefmt='fancy_grid', showindex=False))
+
+    # Final Insights
+    print("-" * 80)
+    print("ANALYSIS READY FOR HYPOTHESIS TESTING:")
+    print(f"1. Demographic: Avg. Age of victims is {df['Age_Clean'].mean():.1f} years.")
+    print(f"2. Regional: {country_counts.iloc[0]['Country']} remains the highest risk market.")
+    print(f"3. Integrity: All Null Ages and Duplicate records have been purged.")
